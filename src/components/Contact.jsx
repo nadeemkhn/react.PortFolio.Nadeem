@@ -8,7 +8,11 @@ const Contact = () => {
         <div className='text-center tracking-tighter'>
             <p className='my-4'>{contact.address}</p>
             <p className='my-4'>{contact.phoneNo}</p>
-            <p className='my-4'>{contact.email}</p>
+              <p className='my-4'>
+                <a href={`mailto:${contact.email}`} className='text-blue-500 underline'>
+                    {contact.email}
+                </a>
+            </p>
         </div>
 
     </div>

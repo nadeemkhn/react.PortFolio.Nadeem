@@ -15,9 +15,9 @@ export const Projects=[
 
        {
         Title:"Medicine Pharmacy",
-        Description:"Developed a custom Odoo module to streamline operations for a medicine distribution company.
+        Description:`Developed a custom Odoo module to streamline operations for a medicine distribution company.
                      Features include managing medicine inventory, tracking suppliers, monitoring stock levels, and
-                     generating detailed sales and distribution report "
+                     generating detailed sales and distribution report `
         ,
         Technologies :["Python  |","XML"]
     },

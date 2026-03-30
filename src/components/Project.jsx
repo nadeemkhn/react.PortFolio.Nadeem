@@ -4,16 +4,21 @@ import { Projects } from '../constants/index';
 
 const Project = () => {
   return (
-    <div className='border-b border-neutral-900 pb-12'>
-      <motion.h1
+    <section id='projects' className='border-b border-neutral-900 py-20'>
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className='my-20 text-center text-4xl'
+        className='text-center mb-14'
       >
-        Projects
-      </motion.h1>
+        <h2 className='text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+          Projects
+        </h2>
+        <p className='mt-3 text-neutral-400 text-sm max-w-xl mx-auto'>
+          A selection of real-world projects delivered across Odoo ERP, integrations, and web development.
+        </p>
+      </motion.div>
 
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
         {Projects.map((project, index) => (
@@ -74,7 +79,7 @@ const Project = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

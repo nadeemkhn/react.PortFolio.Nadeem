@@ -4,16 +4,16 @@ import { contact } from '../constants';
 
 const Contact = () => {
   return (
-    <div className='pb-20 pt-4'>
-      <motion.h1
+    <section id='contact' className='pb-20 pt-4'>
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className='my-10 text-center text-4xl'
+        className='my-10 text-center text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'
       >
         Get in Touch
-      </motion.h1>
+      </motion.h2>
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -39,7 +39,7 @@ const Contact = () => {
           </a>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

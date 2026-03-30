@@ -95,23 +95,6 @@ export const Projects = [
     ],
     Technologies: ['Python', 'Odoo', 'Walmart API', 'REST API', 'XML'],
   },
-  {
-    Title: 'Weather Website',
-    Description:
-      'A weather app that provides real-time weather information using HTML, CSS, JavaScript, and a weather API.',
-    Technologies: ['HTML', 'CSS', 'JavaScript', 'Weather API'],
-  },
-  {
-    Title: 'Portfolio Website',
-    Description: 'A fully responsive personal portfolio website built with React JS and Tailwind CSS.',
-    Technologies: ['React JS', 'Tailwind CSS', 'Framer Motion'],
-  },
-  {
-    Title: 'Medicine Pharmacy – Odoo Module',
-    Description:
-      'Custom Odoo module for a medicine distribution company with inventory management, supplier tracking, stock monitoring, and sales reporting.',
-    Technologies: ['Python', 'XML', 'Odoo', 'QWeb'],
-  },
 ];
 
 // ─── Skills ───────────────────────────────────────────────────────────────────
@@ -241,7 +224,7 @@ export const education = [
 
 // ─── Contact ──────────────────────────────────────────────────────────────────
 export const contact = {
-  address: 'Johar Town, Lahore, Pakistan',
+  address: 'Islamabad, Pakistan',
   phoneNo: '+92 305 9290390',
   email: 'nadeemwazir0123@gmail.com',
 };

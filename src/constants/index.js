@@ -95,6 +95,23 @@ export const Projects = [
     ],
     Technologies: ['Python', 'Odoo', 'Walmart API', 'REST API', 'XML'],
   },
+
+  {
+  Title: 'Leopards Courier – Odoo Delivery Integration',
+  Description:
+    'Integrated Odoo Delivery with Leopards Courier to automate live rate calculation, shipment booking, consignment tracking, label attachment, and cancellation handling.',
+  Highlights: [
+    'Implemented live shipping rate calculation using Leopards Courier API',
+    'Built manual shipment booking flow from Odoo delivery orders',
+    'Generated consignment numbers (CN) and stored them in tracking reference',
+    'Attached shipment labels to delivery orders when returned by the API',
+    'Integrated tracking status synchronization using Leopards tracking API',
+    'Developed scheduled actions for automatic tracking refresh and queued cancellation processing',
+    'Enabled shipment cancellation directly from Odoo with Leopards API integration',
+    'Configured shipper, account, and delivery method setup for flexible operational use',
+  ],
+  Technologies: ['Python', 'Odoo', 'REST API', 'JSON', 'Cron Jobs'],
+},
 ];
 
 // ─── Skills ───────────────────────────────────────────────────────────────────

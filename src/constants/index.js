@@ -216,8 +216,8 @@ export const experiences = [
 export const education = [
   {
     degree: 'Bachelor of Science in Computer Science',
-    institution: 'University of Lahore',
-    period: '2019 – 2023',
+    institution: 'Government College University Faisalabad',
+    period: '2020 – 2024',
     description: 'Studied core computer science subjects including programming, databases, software engineering, and web development.',
   },
 ];

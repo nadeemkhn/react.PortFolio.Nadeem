@@ -15,6 +15,37 @@ export const Projects = [
     ],
     Technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design', 'SEO'],
   },
+
+  {
+  Title: 'Flutter Delivery App – Odoo ERP Integration',
+  Description:
+    'Developed a mobile delivery application using Flutter integrated with Odoo ERP to streamline last-mile delivery operations, real-time tracking, and proof of delivery workflows.',
+  Highlights: [
+    'Implemented secure login using Odoo backend authentication',
+    'Built delivery dashboard with assigned, pending, and completed orders',
+    'Displayed detailed picking data including customer and payment information',
+    'Enabled delivery status updates (accept, deny, delivered)',
+    'Implemented delivery verification using token/PIN validation',
+    'Captured proof of delivery with image upload functionality',
+    'Handled postpaid orders with cash collection and payment tracking',
+    'Displayed invoice and commission history for delivery staff',
+    'Developed profile management features (update info, reset password)',
+    'Implemented multilingual UI with RTL language support',
+    'Integrated Firebase push notifications for real-time order updates',
+    'Added dynamic branding (app name/logo) synced from Odoo backend',
+    'Designed scalable mobile-to-ERP architecture for real-time synchronization',
+  ],
+  Technologies: [
+    'Flutter',
+    'Dart',
+    'Odoo',
+    'REST API',
+    'Firebase',
+    'Push Notifications',
+    'JSON'
+  ],
+},
+  
   {
     Title: 'End-to-End Zoho CRM & Zoho Books → Odoo ERP Integration',
     Description:

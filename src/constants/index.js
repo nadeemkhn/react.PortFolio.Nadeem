@@ -252,7 +252,6 @@ export const experiences = [
     description:
       'Delivering end-to-end Odoo ERP customization, third-party integrations (Shopify, Walmart, Zoho, Repzo), and frontend web development for clients across Pakistan and internationally.',
     highlights: [
-      'Developed and deployed 10+ custom Odoo modules',
       'Integrated Odoo with Shopify, Walmart, Zoho CRM/Books, Repzo, and Leopards Courier; also developed a Flutter delivery mobile app integrated with Odoo for real-time logistics management',
       'Built responsive corporate and eCommerce websites',
       'Configured Accounting, Inventory, Sales, and Purchase workflows',

@@ -66,7 +66,7 @@ const Hero = () => {
                 </div>
                 <div className='flex items-center gap-3 justify-center lg:justify-start'>
                   <FaMapMarkerAlt className='text-cyan-400 shrink-0' />
-                  <span>Johar Town, Lahore, Pakistan</span>
+                  <span>Islamabad, Pakistan</span>
                 </div>
               </motion.div>
 

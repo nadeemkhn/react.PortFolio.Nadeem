@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import {
   FaShoppingCart, FaGlobe, FaDesktop, FaChartBar,
   FaFileAlt, FaPlug, FaCubes, FaStore, FaDatabase,
+  FaMobileAlt, FaExchangeAlt, FaWordpress, FaRobot,
 } from 'react-icons/fa';
 import { services } from '../constants/index';
 
@@ -15,6 +16,10 @@ const serviceIcons = [
   <FaCubes />,
   <FaStore />,
   <FaDatabase />,
+  <FaMobileAlt />,
+  <FaExchangeAlt />,
+  <FaWordpress />,
+  <FaRobot />,
 ];
 
 const container = {

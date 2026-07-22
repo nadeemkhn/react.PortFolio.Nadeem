@@ -1,8 +1,14 @@
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact } from 'react-icons/fa';
+import {
+  FaHtml5, FaCss3Alt, FaBootstrap, FaReact,
+  FaWordpress, FaAndroid, FaApple,
+} from 'react-icons/fa';
 import { RiTailwindCssLine, RiJavascriptLine } from 'react-icons/ri';
 import { DiMongodb, DiPostgresql, DiPython } from 'react-icons/di';
-import { SiOdoo, SiGit } from 'react-icons/si';
+import {
+  SiOdoo, SiGit, SiOpenai, SiAnthropic, SiTwilio,
+  SiWhatsapp, SiFlutter, SiDart, SiFirebase,
+} from 'react-icons/si';
 import { skillCategories } from '../constants/index';
 
 // Map skill name → icon component
@@ -25,6 +31,19 @@ const iconMap = {
   'Webhooks': <span className='text-lg font-bold text-pink-400'>Hook</span>,
   'JSON': <span className='text-lg font-bold text-pink-400'>JSON</span>,
   'Git': <SiGit className='text-5xl text-pink-400' />,
+  'OpenAI API': <SiOpenai className='text-5xl text-amber-400' />,
+  'Anthropic Claude': <SiAnthropic className='text-5xl text-amber-400' />,
+  'OCR': <span className='text-xl font-bold text-amber-400'>OCR</span>,
+  'Twilio': <SiTwilio className='text-5xl text-amber-400' />,
+  'WhatsApp API': <SiWhatsapp className='text-5xl text-amber-400' />,
+  'Flutter': <SiFlutter className='text-5xl text-emerald-400' />,
+  'Dart': <SiDart className='text-5xl text-emerald-400' />,
+  'Firebase': <SiFirebase className='text-5xl text-emerald-400' />,
+  'WebSockets': <span className='text-sm font-bold text-emerald-400'>WS</span>,
+  'WordPress': <FaWordpress className='text-5xl text-purple-400' />,
+  'Android': <FaAndroid className='text-5xl text-emerald-400' />,
+  'iOS': <FaApple className='text-5xl text-emerald-400' />,
+  'JSON-RPC': <span className='text-xs font-bold text-emerald-400'>RPC</span>,
 };
 
 const container = {

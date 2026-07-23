@@ -28,7 +28,8 @@ const Project = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: (index % 2) * 0.1, ease: 'easeOut' }}
-            className='rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 flex flex-col hover:border-neutral-600 transition-colors duration-300'
+            whileHover={{ y: -6 }}
+            className='group relative rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 flex flex-col transition-colors duration-300 hover:border-purple-500/50 hover:shadow-[0_0_30px_-8px_rgba(168,85,247,0.45)]'
           >
             {/* Title row */}
             <div className='flex items-start justify-between gap-3 flex-wrap'>

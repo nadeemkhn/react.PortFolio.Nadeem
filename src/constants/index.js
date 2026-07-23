@@ -115,36 +115,6 @@ export const Projects = [
     ],
   },
   {
-  Title: 'Flutter Delivery App – Odoo ERP Integration',
-  Description:
-    'Developed a mobile delivery application using Flutter integrated with Odoo ERP to streamline last-mile delivery operations, real-time tracking, and proof of delivery workflows.',
-  Highlights: [
-    'Implemented secure login using Odoo backend authentication',
-    'Built delivery dashboard with assigned, pending, and completed orders',
-    'Displayed detailed picking data including customer and payment information',
-    'Enabled delivery status updates (accept, deny, delivered)',
-    'Implemented delivery verification using token/PIN validation',
-    'Captured proof of delivery with image upload functionality',
-    'Handled postpaid orders with cash collection and payment tracking',
-    'Displayed invoice and commission history for delivery staff',
-    'Developed profile management features (update info, reset password)',
-    'Implemented multilingual UI with RTL language support',
-    'Integrated Firebase push notifications for real-time order updates',
-    'Added dynamic branding (app name/logo) synced from Odoo backend',
-    'Designed scalable mobile-to-ERP architecture for real-time synchronization',
-  ],
-  Technologies: [
-    'Flutter',
-    'Dart',
-    'Odoo',
-    'REST API',
-    'Firebase',
-    'Push Notifications',
-    'JSON'
-  ],
-},
-  
-  {
     Title: 'Odoo Mobile ERP – Flutter Business Management App',
     Description:
       'Developed a cross-platform Flutter mobile client that brings core Odoo ERP operations to phones and tablets, covering CRM, Sales, Purchase, Inventory, Projects, and Accounting through a single native app.',
@@ -242,6 +212,23 @@ export const Projects = [
     Technologies: ['Python', 'Odoo', 'Shopify API', 'REST API', 'Webhooks', 'JSON', 'XML'],
   },
   {
+    Title: 'Top Shelf – Retail ERP, Shopify & Inventory Suite (Odoo 19)',
+    Description:
+      'Delivered a multi-module Odoo 19 solution for Top Shelf, a retail business, integrating Shopify with inventory, purchasing, sales, and landed-cost costing across six custom modules.',
+    Highlights: [
+      'Built a real-time, bi-directional Shopify ↔ Odoo connector syncing orders, products, stock, and payments',
+      'Implemented the full commerce lifecycle: product import/export, stock export, order edits, cancellations, refunds, exchanges, and returns',
+      'Developed a Shopify dashboard with product-visibility controls, material-type handling, and barcode management',
+      'Built dedicated one-time product synchronization tooling for catalogue onboarding',
+      'Engineered a manual landed-cost allocation grid for Odoo 19 with consolidated per-product and per-shipment cost reports',
+      'Created Purchase Order Controls with a custom purchase voucher format using native Odoo packaging and UoM',
+      'Customized the sales flow with advance-payment invoicing, a custom invoice wizard, and full-delivery handling',
+      'Integrated barcode scanning into inventory stock-picking operations',
+      'Led development as the primary contributor with a pull-request-based staging workflow',
+    ],
+    Technologies: ['Python', 'Odoo 19', 'Shopify API', 'REST API', 'Webhooks', 'JSON', 'QWeb', 'PostgreSQL'],
+  },
+  {
     Title: 'Snusmore – eCommerce Website Development',
     Link: 'https://www.snusmore.com/',
     Description:
@@ -305,6 +292,51 @@ export const Projects = [
   Technologies: ['Python', 'Odoo', 'REST API', 'JSON', 'Cron Jobs'],
 },
 
+  {
+    Title: 'Education Management System – Odoo 19 School ERP',
+    Description:
+      'Delivered and migrated a comprehensive school & education management ERP on Odoo 19, digitizing the entire institute lifecycle — admissions, academics, attendance, examinations, fees, transport, and staff — across a 90+ model platform with dedicated student and parent portals.',
+    Highlights: [
+      'Online admissions with a public website application form, document requirements, and an automated student enrollment workflow',
+      'Student information management with student and parent records, guardian linking, and self-service portal access',
+      'Academic structure setup: academic years, sessions, grades, classes, sections, subjects, timetables, and weekly schedules',
+      'Lesson planning and class scheduling tools with room and time-slot allocation for teachers',
+      'Attendance tracking via a barcode attendance kiosk plus per-student and per-class attendance with configurable tags and public holidays',
+      'Assignment management with class and student assignments, file attachments, assignment types, and grading',
+      'Examinations and grading with configurable grade scales, grade symbols, terms, and term report cards',
+      'Fees management with fee structures, fee components, fee slips, and online fee collection through integrated payment gateways',
+      'Discipline tracking, scholarship management, and automated transfer-certificate generation',
+      'Transport management with routes, stops, trips, and pickup/drop locations',
+      'Teacher and staff management: teacher/supervisor roles, subject assignment, service hours, and staff salary processing',
+      'Student and parent portals with dashboards, profiles, assignments, and class schedules built on custom HTTP controllers',
+      'School-wide notice board for announcements and communication',
+      'Multi-company / multi-branch support with role-based access control and record rules',
+      'Migrated the full 90+ model platform to Odoo 19, modernizing deprecated ORM constraint and context APIs',
+    ],
+    Technologies: ['Python', 'Odoo 19', 'JavaScript', 'HR', 'Accounting', 'Website', 'Portal', 'QWeb', 'XML', 'PostgreSQL'],
+  },
+
+  {
+    Title: 'Manafethme – (Odoo 18 + Flutter)',
+    Description:
+      'Delivered an end-to-end Odoo 18 solution for Manafeth Mobility & Medical combining a field-service installation & handover reporting system with a cross-platform Flutter delivery driver app backed by a custom Odoo Driver API.',
+    Highlights: [
+      'Built a field-service installation & handover system on Odoo Field Service (industry_fsm), Project, Sales, and Inventory',
+      'Configurable checklist templates per product and category, auto-generating checklist items on installation reports from sale order lines',
+      'Installation & handover reports capturing installed products, checklist results, and completion status with QWeb PDF sign-off documents',
+      'Developed a cross-platform Flutter delivery driver app for last-mile delivery, real-time tracking, and proof of delivery',
+      'Engineered the Odoo backend as a custom Driver API module exposing secure REST endpoints for the mobile app',
+      'Secure driver login via Odoo authentication with a dashboard of assigned, pending, and completed deliveries',
+      'Detailed picking data with customer and payment info, plus delivery status updates (accept, deny, delivered)',
+      'Delivery verification via token/PIN validation and proof-of-delivery image capture',
+      'Postpaid order handling with cash collection and payment tracking through payment-provider integration',
+      'Driver wallet tracking earnings, with incentive/commission programs and invoice history',
+      'Firebase Cloud Messaging push notifications for real-time order updates',
+      'Multilingual UI with RTL support and dynamic branding (app name/logo) synced from the Odoo backend',
+      'Profile management (update info, reset password) on a scalable mobile-to-ERP synchronization architecture',
+    ],
+    Technologies: ['Python', 'Odoo 18', 'Flutter', 'Dart', 'Field Service (FSM)', 'REST API', 'Firebase', 'QWeb', 'PostgreSQL', 'XML'],
+  },
   {
     Title: 'ARW & Partners – Law Firm Website (WordPress)',
     Link: 'https://arw.com.pk/',
@@ -486,7 +518,7 @@ export const services = [
 // ─── Experience ────────────────────────────────────────────────────────────────
 export const experiences = [
   {
-    role: 'Freelance Odoo Developer & Frontend Developer',
+    role: 'Freelance Odoo & Flutter Developer',
     company: 'Self-Employed',
     period: '2022 – Present',
     description:

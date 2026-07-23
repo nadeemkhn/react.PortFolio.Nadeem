@@ -1,12 +1,76 @@
+import { useState, useEffect, useRef } from 'react';
 import Profile from '../assets/Profile.jpg';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence, useInView, animate } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
+
+const stats = [
+  { to: 15, suffix: '+', label: 'Projects' },
+  { to: 4, suffix: '+', label: 'Years Exp.' },
+  { to: 8, suffix: '+', label: 'Integrations' },
+  { to: 3, suffix: '', label: 'Mobile Apps' },
+];
+
+const Counter = ({ to, suffix = '' }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: '-40px' });
+  const [val, setVal] = useState(0);
+
+  useEffect(() => {
+    if (!inView) return;
+    const controls = animate(0, to, {
+      duration: 1.4,
+      ease: 'easeOut',
+      onUpdate: (v) => setVal(Math.floor(v)),
+    });
+    return () => controls.stop();
+  }, [inView, to]);
+
+  return (
+    <span ref={ref}>
+      {val}
+      {suffix}
+    </span>
+  );
+};
 
 const fadeLeft = (delay = 0) => ({
   initial: { opacity: 0, x: -50 },
   animate: { opacity: 1, x: 0 },
   transition: { duration: 0.7, delay, ease: 'easeOut' },
 });
+
+const roles = [
+  'Odoo Developer',
+  'Flutter Developer',
+  'ERP Integration Expert',
+  'Full-Stack Developer',
+];
+
+const RotatingRole = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % roles.length), 2400);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <span className='relative inline-flex h-[1.6em] items-center overflow-hidden leading-none'>
+      <AnimatePresence mode='wait'>
+        <motion.span
+          key={index}
+          initial={{ y: '100%', opacity: 0 }}
+          animate={{ y: '0%', opacity: 1 }}
+          exit={{ y: '-100%', opacity: 0 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          className='block whitespace-nowrap'
+        >
+          {roles[index]}
+        </motion.span>
+      </AnimatePresence>
+    </span>
+  );
+};
 
 const Hero = () => {
   return (
@@ -26,8 +90,8 @@ const Hero = () => {
               </motion.h1>
 
               <motion.div {...fadeLeft(0.15)} className='mt-4'>
-                <span className='inline-block rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 px-5 py-2 text-base sm:text-lg font-semibold text-white shadow-lg'>
-                  Odoo Developer &amp; Frontend Specialist
+                <span className='inline-flex items-center rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 px-5 py-2 text-base sm:text-lg font-semibold text-white shadow-lg'>
+                  <RotatingRole />
                 </span>
               </motion.div>
 
@@ -35,19 +99,21 @@ const Hero = () => {
                 {...fadeLeft(0.3)}
                 className='mt-6 max-w-xl text-neutral-400 leading-relaxed text-sm sm:text-base'
               >
-                I am an Odoo developer with strong expertise in Python and advanced skills in
-                customizing and extending Odoo modules. I specialize in Point of Sale (POS)
-                customization, Portal customization, Website customization, QWeb report
-                development, and comprehensive integration solutions.
+                I am an Odoo developer with 4+ years of experience and strong Python expertise in
+                customizing and extending Odoo across Sales, Purchase, Inventory, Accounting, POS,
+                and HR. I specialize in Point of Sale (POS) customization, Portal and Website
+                customization, QWeb report development, and end-to-end third-party integrations.
               </motion.p>
 
               <motion.p
                 {...fadeLeft(0.4)}
                 className='mt-3 max-w-xl text-neutral-400 leading-relaxed text-sm sm:text-base'
               >
-                Proficient in front-end technologies like HTML, CSS, JavaScript, TailwindCSS,
-                React.js and Bootstrap, I create responsive, user-friendly interfaces. I also
-                deliver scalable, clean, and efficient ERP solutions tailored to business needs.
+                I also build cross-platform mobile apps with Flutter — from Odoo-connected
+                business apps to delivery and chat solutions — and craft responsive interfaces
+                with React.js, TailwindCSS, and Bootstrap. From AI-assisted document automation
+                and OCR to real-time marketplace sync with Shopify, Walmart, and Zoho, I deliver
+                scalable, clean, and efficient solutions tailored to business needs.
               </motion.p>
 
               {/* Contact info */}
@@ -96,6 +162,25 @@ const Hero = () => {
                 </a>
               </motion.div>
 
+              {/* Stats */}
+              <motion.div
+                {...fadeLeft(0.8)}
+                className='mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-lg'
+              >
+                {stats.map((s) => (
+                  <motion.div
+                    key={s.label}
+                    whileHover={{ y: -4 }}
+                    className='rounded-xl border border-neutral-800 bg-neutral-900/50 px-3 py-3 text-center'
+                  >
+                    <div className='text-2xl sm:text-3xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                      <Counter to={s.to} suffix={s.suffix} />
+                    </div>
+                    <div className='mt-1 text-xs text-neutral-400'>{s.label}</div>
+                  </motion.div>
+                ))}
+              </motion.div>
+
             </div>
           </div>
 
@@ -107,12 +192,26 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
               className='relative'
             >
-              <div className='absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 blur-2xl opacity-25 scale-110'></div>
-              <img
-                src={Profile}
-                alt='Muhammad Nadeem'
-                className='relative h-64 w-64 sm:h-80 sm:w-80 rounded-full object-cover border-4 border-neutral-800 shadow-2xl'
-              />
+              {/* Floating wrapper */}
+              <motion.div
+                animate={{ y: [0, -14, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+                className='relative'
+              >
+                {/* Rotating gradient glow */}
+                <motion.div
+                  aria-hidden
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
+                  className='absolute -inset-3 rounded-full bg-[conic-gradient(from_0deg,rgba(99,102,241,0.5),rgba(168,85,247,0.5),rgba(236,72,153,0.5),rgba(99,102,241,0.5))] blur-md opacity-70'
+                />
+                <div className='absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 blur-2xl opacity-25 scale-110'></div>
+                <img
+                  src={Profile}
+                  alt='Muhammad Nadeem'
+                  className='relative h-64 w-64 sm:h-80 sm:w-80 rounded-full object-cover object-[50%_22%] border-4 border-neutral-900 shadow-2xl'
+                />
+              </motion.div>
             </motion.div>
           </div>
 
